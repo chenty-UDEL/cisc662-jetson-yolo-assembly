@@ -22,6 +22,7 @@ def main():
         assert sha(ROOT/'original_project'/path)==identity[path]
     top=('README.md','COMPARE_EN.md','COMPARE_ZH.md','build.py','test_reference.py','verify_assembly.py','package_submission.py','requirements-verification.txt','build_record.json','source_provenance.json','compiler_download.json','.gitignore')
     files=[ROOT/p for p in top]
+    files.extend(ROOT/p for p in ('SUBMISSION.md','.gitattributes') if (ROOT/p).is_file())
     for folder in ('src','assembly','objects','disassembly','original_project'):
         files.extend(p for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
     files.extend(p for p in (ROOT/'verification').iterdir() if p.suffix in ('.json','.elf','.dll'))

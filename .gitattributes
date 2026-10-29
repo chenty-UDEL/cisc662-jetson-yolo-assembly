@@ -1,0 +1,2 @@
+# Preserve the exact bytes recorded in source_provenance.json and SHA256SUMS.
+* -text
