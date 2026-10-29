@@ -1,0 +1,109 @@
+[
+  {
+    "original_bundle_path": "src/analyze_coco400.py",
+    "copied_path": "original_project/src/analyze_coco400.py",
+    "sha256": "201fd5c8cc8334855dadf1732e1a139e19958ac1d5541e742cf68b9958ff6a82",
+    "matches_experiment_execution_identity": null
+  },
+  {
+    "original_bundle_path": "src/benchmark.py",
+    "copied_path": "original_project/src/benchmark.py",
+    "sha256": "268484b6b36a1eb46a5ee6b5e125f8067343ff99f493b04571b4462bf355bea1",
+    "matches_experiment_execution_identity": true
+  },
+  {
+    "original_bundle_path": "src/check_environment.py",
+    "copied_path": "original_project/src/check_environment.py",
+    "sha256": "9ac6b9719afbcc38b8c7e4aac56ea9fa8dbdc9ab7c14f8b0bf5eddf5be3a49d4",
+    "matches_experiment_execution_identity": null
+  },
+  {
+    "original_bundle_path": "src/common.py",
+    "copied_path": "original_project/src/common.py",
+    "sha256": "9dd6711c496ee353c02da10239c925b3a5289e4a32249efbb5527b7be4a27807",
+    "matches_experiment_execution_identity": true
+  },
+  {
+    "original_bundle_path": "src/compare_detections.py",
+    "copied_path": "original_project/src/compare_detections.py",
+    "sha256": "894e547a53ca5c5bbf585886040fbf63182a16e9d2476f2ad3469257400312c7",
+    "matches_experiment_execution_identity": null
+  },
+  {
+    "original_bundle_path": "src/control_checks.py",
+    "copied_path": "original_project/src/control_checks.py",
+    "sha256": "6c44715db389bfddfdcbee648ec2cdb4fe563a32a9ad14b474276cded82d7767",
+    "matches_experiment_execution_identity": null
+  },
+  {
+    "original_bundle_path": "src/engine_inspector.py",
+    "copied_path": "original_project/src/engine_inspector.py",
+    "sha256": "4b0e7715511072daf5129a3b10a89bcbc0856fa64981403eba612de34e1b0e0b",
+    "matches_experiment_execution_identity": null
+  },
+  {
+    "original_bundle_path": "src/monitor.py",
+    "copied_path": "original_project/src/monitor.py",
+    "sha256": "7a14897db47cd987f5d90ce75b76206888517e3cf3235e4f283005c964ad7e9a",
+    "matches_experiment_execution_identity": null
+  },
+  {
+    "original_bundle_path": "src/offline_recompute.py",
+    "copied_path": "original_project/src/offline_recompute.py",
+    "sha256": "c6fced0230aada1900b6c684f1dae2170cd6e04117a105f0015fab9b1347c832",
+    "matches_experiment_execution_identity": null
+  },
+  {
+    "original_bundle_path": "src/package_results.py",
+    "copied_path": "original_project/src/package_results.py",
+    "sha256": "7c5b1339774f238755547202d87ff66ad874bb8a42fe5065d7a6f16222a8f6b7",
+    "matches_experiment_execution_identity": null
+  },
+  {
+    "original_bundle_path": "src/prepare_inputs.py",
+    "copied_path": "original_project/src/prepare_inputs.py",
+    "sha256": "136957efaf0157246b694e5f737ddda15adf7bee1dee68fca31893c403294841",
+    "matches_experiment_execution_identity": null
+  },
+  {
+    "original_bundle_path": "src/run_controlled.py",
+    "copied_path": "original_project/src/run_controlled.py",
+    "sha256": "692a85d52ac08013576338b936d432133fc16a2a1cbf43e55a03f69e2315df4f",
+    "matches_experiment_execution_identity": null
+  },
+  {
+    "original_bundle_path": "src/selftest_analysis.py",
+    "copied_path": "original_project/src/selftest_analysis.py",
+    "sha256": "3f393ea433e160398a6822a385a5af6b847d0c3c5df16b3a41215bc789583144",
+    "matches_experiment_execution_identity": null
+  },
+  {
+    "original_bundle_path": "src/setup_experiment.py",
+    "copied_path": "original_project/src/setup_experiment.py",
+    "sha256": "98ed9ff4001b853b212a901286ceb9f1933724d47ef8daad448561bd88187652",
+    "matches_experiment_execution_identity": null
+  },
+  {
+    "original_bundle_path": "src/supplement_report.py",
+    "copied_path": "original_project/src/supplement_report.py",
+    "sha256": "d9c57eb1ab9012d80491c1e51cdeb7eea5d3fb6db7b8e260e20ad32b658aca94",
+    "matches_experiment_execution_identity": null
+  },
+  {
+    "original_bundle_path": "src/verify_engine.py",
+    "copied_path": "original_project/src/verify_engine.py",
+    "sha256": "02b49ff383064a3a4a6a5a78855da999aa33132bc523d23ca625f94ceaea642f",
+    "matches_experiment_execution_identity": null
+  },
+  {
+    "original_bundle_path": "src/verify_package.py",
+    "copied_path": "original_project/src/verify_package.py",
+    "sha256": "32c29545053889b9c788cd67e199317c4bfc3ef9b0e7aab7b021bdc14a9094e7",
+    "matches_experiment_execution_identity": null
+  },
+  {
+    "reference_source": "src/preprocess_core.c",
+    "sha256": "3dadebe6122d135101db5564e148331440f6453cd33f3ce437bcbf0355b4ae26",
+    "status": "New CPU reference, not part of the original measured benchmark"
+  }
+]

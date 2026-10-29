@@ -1,0 +1,29 @@
+00000000010011b0  4885d2                  test       rdx, rdx
+00000000010011b3  7464                    je         0x1001219
+00000000010011b5  55                      push       rbp
+00000000010011b6  4889e5                  mov        rbp, rsp
+00000000010011b9  4883c702                add        rdi, 2
+00000000010011bd  f30f100593efffff        movss      xmm0, dword ptr [rip - 0x106d]
+00000000010011c5  4889d0                  mov        rax, rdx
+00000000010011c8  0f1f840000000000        nop        dword ptr [rax + rax]
+00000000010011d0  0fb60f                  movzx      ecx, byte ptr [rdi]
+00000000010011d3  0f57c9                  xorps      xmm1, xmm1
+00000000010011d6  f30f2ac9                cvtsi2ss   xmm1, ecx
+00000000010011da  f30f5ec8                divss      xmm1, xmm0
+00000000010011de  0fb64fff                movzx      ecx, byte ptr [rdi - 1]
+00000000010011e2  0f57d2                  xorps      xmm2, xmm2
+00000000010011e5  f30f2ad1                cvtsi2ss   xmm2, ecx
+00000000010011e9  f30f110e                movss      dword ptr [rsi], xmm1
+00000000010011ed  f30f5ed0                divss      xmm2, xmm0
+00000000010011f1  f30f111496              movss      dword ptr [rsi + rdx*4], xmm2
+00000000010011f6  0fb64ffe                movzx      ecx, byte ptr [rdi - 2]
+00000000010011fa  0f57c9                  xorps      xmm1, xmm1
+00000000010011fd  f30f2ac9                cvtsi2ss   xmm1, ecx
+0000000001001201  f30f5ec8                divss      xmm1, xmm0
+0000000001001205  f30f110cd6              movss      dword ptr [rsi + rdx*8], xmm1
+000000000100120a  4883c604                add        rsi, 4
+000000000100120e  4883c703                add        rdi, 3
+0000000001001212  4883c0ff                add        rax, -1
+0000000001001216  75b8                    jne        0x10011d0
+0000000001001218  5d                      pop        rbp
+0000000001001219  c3                      ret        

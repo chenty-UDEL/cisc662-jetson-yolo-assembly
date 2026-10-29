@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "native_test_target": "x86_64 Windows",
+  "comparison": "Exact FP32 values vs independent Python index/rounding reference",
+  "zero_count_null_pointer_case": true,
+  "cases": [
+    {
+      "name": "one_pixel",
+      "pixels": 1,
+      "checked_values": 3,
+      "passed": true
+    },
+    {
+      "name": "two_pixels_channel_order",
+      "pixels": 2,
+      "checked_values": 6,
+      "passed": true
+    },
+    {
+      "name": "all_byte_values",
+      "pixels": 256,
+      "checked_values": 768,
+      "passed": true
+    },
+    {
+      "name": "odd_length_random",
+      "pixels": 17,
+      "checked_values": 51,
+      "passed": true
+    },
+    {
+      "name": "640x640_random",
+      "pixels": 409600,
+      "checked_values": 1228800,
+      "passed": true
+    }
+  ],
+  "source_sha256": "3dadebe6122d135101db5564e148331440f6453cd33f3ce437bcbf0355b4ae26"
+}

@@ -1,0 +1,9 @@
+{
+  "config.json": "7bac139162e187e783bb87b226e01a39291865033b6521f88b7f5c84a4f341c1",
+  "environment.json": "9f7792d4287038d98d5f14d2533c422ef453970d113e40a7843c5d643b39d699",
+  "input_manifest.json": "7a61e88d4e647be7fdd3d00a76f3739c16dcf5bbd6760fb73fb9a2c5f1ee9cce",
+  "models/source_model.pt": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+  "models/source_model.engine": "2fa8248bba5ee2903ee6814d4592bbbb8118f4820adbc92df05a1e72f22e3413",
+  "src/benchmark.py": "268484b6b36a1eb46a5ee6b5e125f8067343ff99f493b04571b4462bf355bea1",
+  "src/common.py": "9dd6711c496ee353c02da10239c925b3a5289e4a32249efbb5527b7be4a27807"
+}

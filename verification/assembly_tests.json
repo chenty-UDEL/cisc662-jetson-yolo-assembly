@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "method": "Unicorn instruction emulation of ELF files assembled from the submitted .s files; no hardware performance measurement",
+  "unicorn_version": "2.1.4",
+  "capstone_version": "5.0.7",
+  "targets": [
+    {
+      "target": "x86_64",
+      "elf_machine": 62,
+      "assembly_sha256": "d1e5f8e55ffa8c8a8d4bc75db8d4465f3a279e7442012eb831cb3f782b51ce85",
+      "object_sha256": "a50824bae8810f39c6b5da5f094844e182cb8f5111861f46953c607b7a6ed64a",
+      "elf_sha256": "c1ebd9cf1b407c8df5ae98d9af79bcad84e389f72f9060f7ee2659c75ef080ec",
+      "function_bytes": 106,
+      "static_instruction_count": 29,
+      "instruction_sizes_bytes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8
+      ],
+      "cases": [
+        {
+          "name": "zero_count",
+          "pixels": 0,
+          "checked_values": 0,
+          "passed": true,
+          "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "one_pixel",
+          "pixels": 1,
+          "checked_values": 3,
+          "passed": true,
+          "output_sha256": "c211fed146f7c2233e6000f39069c332fd7289dd69d9673ca4e4165a7384816b"
+        },
+        {
+          "name": "two_pixels_channel_order",
+          "pixels": 2,
+          "checked_values": 6,
+          "passed": true,
+          "output_sha256": "aa20be71e60058f1e525a49bf5af16b8196be70269478aac6f3686b9dc6a7533"
+        },
+        {
+          "name": "all_byte_values",
+          "pixels": 256,
+          "checked_values": 768,
+          "passed": true,
+          "output_sha256": "d9e902c7c339bc309d4ae7321c068952af191547efadaf9dfc9160e1533bb836"
+        },
+        {
+          "name": "odd_length_random",
+          "pixels": 17,
+          "checked_values": 51,
+          "passed": true,
+          "output_sha256": "91562e8ad160b22c35ca69ae67c411a8a105043425e05b9951147f4ab9f5597a"
+        },
+        {
+          "name": "640x640_random",
+          "pixels": 409600,
+          "checked_values": 1228800,
+          "passed": true,
+          "output_sha256": "212c0313a20f5a12d4cc74d75b03e0abee841d7b87ea6baff090aac14fcdab21"
+        }
+      ]
+    },
+    {
+      "target": "armv8_aarch64",
+      "elf_machine": 183,
+      "assembly_sha256": "fe25aad8e998aac8a90b81c16b083b3f85cbe635e22489f1ca042115bff362cb",
+      "object_sha256": "86baa605c5e8808f24584ef69ac62c9219d09d20b189d96c01711288d30e1589",
+      "elf_sha256": "be54ffc8e4bed9d1759ea433415ac1d8ac33832237f4d97c5c503672c632a596",
+      "function_bytes": 92,
+      "static_instruction_count": 23,
+      "instruction_sizes_bytes": [
+        4
+      ],
+      "cases": [
+        {
+          "name": "zero_count",
+          "pixels": 0,
+          "checked_values": 0,
+          "passed": true,
+          "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "one_pixel",
+          "pixels": 1,
+          "checked_values": 3,
+          "passed": true,
+          "output_sha256": "c211fed146f7c2233e6000f39069c332fd7289dd69d9673ca4e4165a7384816b"
+        },
+        {
+          "name": "two_pixels_channel_order",
+          "pixels": 2,
+          "checked_values": 6,
+          "passed": true,
+          "output_sha256": "aa20be71e60058f1e525a49bf5af16b8196be70269478aac6f3686b9dc6a7533"
+        },
+        {
+          "name": "all_byte_values",
+          "pixels": 256,
+          "checked_values": 768,
+          "passed": true,
+          "output_sha256": "d9e902c7c339bc309d4ae7321c068952af191547efadaf9dfc9160e1533bb836"
+        },
+        {
+          "name": "odd_length_random",
+          "pixels": 17,
+          "checked_values": 51,
+          "passed": true,
+          "output_sha256": "91562e8ad160b22c35ca69ae67c411a8a105043425e05b9951147f4ab9f5597a"
+        },
+        {
+          "name": "640x640_random",
+          "pixels": 409600,
+          "checked_values": 1228800,
+          "passed": true,
+          "output_sha256": "212c0313a20f5a12d4cc74d75b03e0abee841d7b87ea6baff090aac14fcdab21"
+        }
+      ]
+    }
+  ]
+}

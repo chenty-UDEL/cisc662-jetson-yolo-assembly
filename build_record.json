@@ -1,0 +1,222 @@
+{
+  "zig_version": "0.15.2",
+  "compiler_version": "clang version 20.1.2 (https://github.com/ziglang/zig-bootstrap 7ef74e656cf8ddbd6bf891a8475892aa1afa6891)\nTarget: x86_64-unknown-windows-gnu\nThread model: posix\nInstalledDir: C:/Users/chen2/Desktop/computer_network/jetson_yolo_benchmark/assembly_study/.tools/zig-x86_64-windows-0.15.2\n",
+  "build_host": "Windows-11-10.0.26200-SP0",
+  "compiler_executable_sha256": "d408dd38eed3e5204af841bcebf70502a4dbbb8399a3a3262be55059370bc018",
+  "source_sha256": "3dadebe6122d135101db5564e148331440f6453cd33f3ce437bcbf0355b4ae26",
+  "shared_flags": [
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-unused-command-line-argument",
+    "-fno-vectorize",
+    "-fno-slp-vectorize",
+    "-fno-unroll-loops",
+    "-ffp-contract=off",
+    "-fno-ident",
+    "-gline-tables-only",
+    "-ffile-prefix-map=C:\\Users\\chen2\\Desktop\\computer_network\\jetson_yolo_benchmark\\assembly_study=."
+  ],
+  "targets": [
+    {
+      "label": "x86_64",
+      "target": "x86_64-linux-gnu",
+      "target_flags": [
+        "-mcpu=baseline",
+        "-masm=intel"
+      ]
+    },
+    {
+      "label": "armv8_aarch64",
+      "target": "aarch64-linux-gnu",
+      "target_flags": [
+        "-mcpu=baseline"
+      ]
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "zig",
+        "version"
+      ],
+      "exit_code": 0,
+      "stdout": "0.15.2\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "zig",
+        "cc",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "clang version 20.1.2 (https://github.com/ziglang/zig-bootstrap 7ef74e656cf8ddbd6bf891a8475892aa1afa6891)\nTarget: x86_64-unknown-windows-gnu\nThread model: posix\nInstalledDir: C:/Users/chen2/Desktop/computer_network/jetson_yolo_benchmark/assembly_study/.tools/zig-x86_64-windows-0.15.2\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "zig",
+        "cc",
+        "-target",
+        "x86_64-linux-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-Wno-unused-command-line-argument",
+        "-fno-vectorize",
+        "-fno-slp-vectorize",
+        "-fno-unroll-loops",
+        "-ffp-contract=off",
+        "-fno-ident",
+        "-gline-tables-only",
+        "-ffile-prefix-map=C:\\Users\\chen2\\Desktop\\computer_network\\jetson_yolo_benchmark\\assembly_study=.",
+        "-mcpu=baseline",
+        "-masm=intel",
+        "src/preprocess_core.c",
+        "-S",
+        "-fverbose-asm",
+        "-o",
+        "assembly/preprocess_x86_64.s"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "zig",
+        "cc",
+        "-target",
+        "x86_64-linux-gnu",
+        "-mcpu=baseline",
+        "-masm=intel",
+        "-c",
+        "assembly/preprocess_x86_64.s",
+        "-o",
+        "objects/preprocess_x86_64.o"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "zig",
+        "cc",
+        "-target",
+        "x86_64-linux-gnu",
+        "-nostdlib",
+        "-static",
+        "-fno-pie",
+        "-no-pie",
+        "-Wl,--entry=yolo_bgr8_to_rgb_chw_f32",
+        "-Wl,--build-id=none",
+        "objects/preprocess_x86_64.o",
+        "-o",
+        "verification/preprocess_x86_64.elf"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-Wno-unused-command-line-argument",
+        "-fno-vectorize",
+        "-fno-slp-vectorize",
+        "-fno-unroll-loops",
+        "-ffp-contract=off",
+        "-fno-ident",
+        "-gline-tables-only",
+        "-ffile-prefix-map=C:\\Users\\chen2\\Desktop\\computer_network\\jetson_yolo_benchmark\\assembly_study=.",
+        "-mcpu=baseline",
+        "src/preprocess_core.c",
+        "-S",
+        "-fverbose-asm",
+        "-o",
+        "assembly/preprocess_armv8_aarch64.s"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu",
+        "-mcpu=baseline",
+        "-c",
+        "assembly/preprocess_armv8_aarch64.s",
+        "-o",
+        "objects/preprocess_armv8_aarch64.o"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu",
+        "-nostdlib",
+        "-static",
+        "-fno-pie",
+        "-no-pie",
+        "-Wl,--entry=yolo_bgr8_to_rgb_chw_f32",
+        "-Wl,--build-id=none",
+        "objects/preprocess_armv8_aarch64.o",
+        "-o",
+        "verification/preprocess_armv8_aarch64.elf"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "zig",
+        "cc",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-Wno-unused-command-line-argument",
+        "-fno-vectorize",
+        "-fno-slp-vectorize",
+        "-fno-unroll-loops",
+        "-ffp-contract=off",
+        "-fno-ident",
+        "-gline-tables-only",
+        "-ffile-prefix-map=C:\\Users\\chen2\\Desktop\\computer_network\\jetson_yolo_benchmark\\assembly_study=.",
+        "src/preprocess_core.c",
+        "-shared",
+        "-o",
+        "verification/preprocess_test.dll"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}
